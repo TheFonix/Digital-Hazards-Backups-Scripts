@@ -1,6 +1,6 @@
 function _spinner() {
-    local on_success="DONE"
-    local on_fail="FAIL"
+    local on_success="DONE <3"
+    local on_fail="ERROR </3"
     local white="\e[1;37m"
     local green="\e[1;32m"
     local red="\e[1;31m"
