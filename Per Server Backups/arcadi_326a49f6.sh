@@ -9,7 +9,7 @@
 #Load the spinner API
 source "/home/spinner-repo/spinner.sh"
 
-NODE="dh-mh-2"
+NODE="dh-mh-1"
 SERVER="arcadi_326a49f6"
 
 #Move towards the Server directory
