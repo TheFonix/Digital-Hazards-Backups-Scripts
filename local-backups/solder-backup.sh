@@ -7,7 +7,7 @@
 
 
 #Load the spinner API
-source "/home/spinner-repo/spinner.sh"
+source "/home/backup-scripts/spinner-repo/spinner.sh"
 
 
 #Move towards the solder directory
@@ -63,4 +63,3 @@ echo "╱╱╭╮"
                         echo "┃╭╮┃╭╮┃╭╮┫┃━┫"
                                 echo "┃╰╯┃╰╯┃┃┃┃┃━┫"
                                         echo "╰━━┻━━┻╯╰┻━━╯"
-

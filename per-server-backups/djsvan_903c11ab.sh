@@ -7,7 +7,7 @@
 
 
 #Load the spinner API
-source "/home/spinner-repo/spinner.sh"
+source "/home/backup-scripts/spinner-repo/spinner.sh"
 
 NODE="dh-mh-1"
 SERVER="djsvan_903c11ab"
