@@ -14,14 +14,14 @@ SERVER="djsvan_903c11ab"
 
 #Move towards the Server directory
 start_spinner 'Moving to the directory of the Daemon Server Target'
-cd /fs-data/daemon-servers/files/$SERVER/rsync_temp
+cd /fs-data/backups/files/$SERVER/rsync_temp
         sleep 2
 stop_spinner $?
 
 
 #Start the RSYNC
 start_spinner 'RSYNC started from Server Location'
-        rsync -avz -P $NODE:/srv/daemon-data/$SERVER/data/* /fs-data/daemon-servers/files/$SERVER/rsync_temp > /dev/null
+        rsync -avz -P $NODE:/srv/daemon-data/$SERVER/data/* /fs-data/backups/files/$SERVER/rsync_temp > /dev/null
 stop_spinner $?
 
 #ZIP the Rsync'ed Files
@@ -32,40 +32,40 @@ stop_spinner $?
 
 #Move files back a directory
 start_spinner 'Moving files back a directory'
-        mv *.zip /fs-data/daemon-servers/files/$SERVER
+        mv *.zip /fs-data/backups/files/$SERVER
         sleep 3
 stop_spinner $?
 
 #Check that there is nothing older than a two week in the directory
 start_spinner 'Checking for files older than two weeks'
-        find /fs-data/daemon-servers/files/$SERVER/*.zip  -mtime +14 -exec rm {} \;
+        find /fs-data/backups/files/$SERVER/*.zip  -mtime +14 -exec rm {} \;
         sleep 3
 stop_spinner $?
 
 #Rebuild ownership structures
 start_spinner 'Rebuild ownership structures'
-        cd /fs-data/daemon-servers/files/$SERVER
+        cd /fs-data/backups/files/$SERVER
         chown -R www-data *
         sleep 3
 stop_spinner $?
 
 #Rebuild access structures
 start_spinner 'Rebuild access structures'
-        cd /fs-data/daemon-servers/files/$SERVER
+        cd /fs-data/backups/files/$SERVER
         chmod -R 755 *
         sleep 3
 stop_spinner $?
 
 #Rebuild access structures
 start_spinner 'Clear up RAW files'
-        rm -rf  /fs-data/daemon-servers/files/$SERVER/rsync_temp/*
+        rm -rf  /fs-data/backups/files/$SERVER/rsync_temp/*
         sleep 3
 stop_spinner $?
 
 #Run OCC discovery
 start_spinner 'Running Nextcloud Discovery for the user backups'
         cd /home/nextcloud
-        sudo -u www-data php occ files:scan --path=/daemon-servers > /dev/null
+        sudo -u www-data php occ files:scan --path=/backups > /dev/null
 stop_spinner $?
 
 echo "╱╱╭╮"
