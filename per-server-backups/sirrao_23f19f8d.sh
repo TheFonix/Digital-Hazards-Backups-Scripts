@@ -13,8 +13,8 @@ NODE="dh-mh-01"
 SERVER="sirrao_23f19f8d"
 
 #Move towards the Server directory
-start_spinner 'Moving to the directory of the Daemon Server Target'
-cd /fs-data/backups/files/$SERVER/rsync_temp
+start_spinner 'Moving to the directory of the Daemon Server Target and building files if needed'
+mkdir -p /fs-data/backups/files/$SERVER/rsync_temp && cd /fs-data/backups/files/$SERVER/rsync_temp
         sleep 2
 stop_spinner $?
 
