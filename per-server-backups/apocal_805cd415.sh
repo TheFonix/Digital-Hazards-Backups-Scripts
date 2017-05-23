@@ -73,9 +73,9 @@ start_spinner 'Clear up RAW files'
 stop_spinner $?
 
 #Run OCC discovery
-start_spinner 'Running Nextcloud Discovery for the user backups'
+start_spinner 'Running Nextcloud Discovery'
         cd /home/nextcloud
-        sudo -u www-data php occ files:scan --path=/backups > /dev/null
+        sudo -u www-data php occ files:scan --path=/backups/files/$SERVER > /dev/null
 stop_spinner $?
 
 echo "╱╱╭╮"
