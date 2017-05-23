@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Running start all scripts! <3"
 
-cd /home/backup-routine
+cd /home/Backup-Routine
 
 cd local-backups
 ./solder-backup.sh

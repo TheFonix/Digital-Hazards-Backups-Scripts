@@ -7,7 +7,7 @@
 
 
 #Load the spinner API
-source "/home/backup-routine/spinner-repo/spinner.sh"
+source "/home/spinner-repo/spinner.sh"
 
 IONODE="dh-mh-01"
 IONODEBACKUP="dh-mh-01-backups"
