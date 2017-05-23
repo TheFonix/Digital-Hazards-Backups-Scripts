@@ -13,13 +13,13 @@ NODE="dh-mh-01"
 SERVER="w0lfin_bc6cc5f0"
 
 #Start the script by saying hi there!
-echo""
-echo""
-echo"-------------------------------------------"
-echo"Hi! My names $SERVER Nice to meet you! <3"
-echo"-------------------------------------------"
-echo""
-echo""
+echo ""
+echo ""
+echo "-------------------------------------------"
+echo "Hi! My names $SERVER Nice to meet you! <3"
+echo "-------------------------------------------"
+echo ""
+echo ""
 sleep 5
 
 #Move towards the Server directory
