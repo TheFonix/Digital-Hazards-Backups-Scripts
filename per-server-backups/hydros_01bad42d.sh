@@ -9,7 +9,7 @@
 #Load the spinner API
 source "/home/backup-scripts/spinner-repo/spinner.sh"
 
-NODE="dh-mh-1"
+NODE="dh-mh-01"
 SERVER="hydros_01bad42d"
 
 #Move towards the Server directory

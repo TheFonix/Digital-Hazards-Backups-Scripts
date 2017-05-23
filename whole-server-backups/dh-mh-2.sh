@@ -10,7 +10,7 @@
 source "/home/backup-scripts/spinner-repo/spinner.sh"
 
 IONODE="dh-mh-02"
-IONODEBACKUP="dh-mh-2-backups"
+IONODEBACKUP="dh-mh-02-backups"
 
 #Move towards the NODE directory
 start_spinner 'Moving to the directory of the IO Target'
