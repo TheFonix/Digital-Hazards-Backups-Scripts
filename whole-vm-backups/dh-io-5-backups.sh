@@ -14,7 +14,7 @@ IONODEBACKUP="dh-io-5-backups"
 
 #Move towards the NODE directory
 start_spinner 'Moving to the directory of the IO Target'
-cd /fs-data/backups/files/$IONODEBACKUP/rsync_temp
+mkdir -p /fs-data/backups/files/$IONODEBACKUP/rsync_temp cd /fs-data/backups/files/$IONODEBACKUP/rsync_temp
         sleep 2
 stop_spinner $?
 
